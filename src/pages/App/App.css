@@ -1,0 +1,31 @@
+.site-layout-content {
+  background: #fff;
+  padding: 24px;
+  min-height: 750px;
+}
+.logo {
+  color: white;
+  width: 200px;
+  height: 31px;
+  float: left;
+}
+.header-menu {
+  float: right;
+}
+
+.time-container {
+  display: flex;
+  justify-content: center;
+}
+
+.time {
+  width: 175px;
+  height: 75px;
+  border-style: solid;
+}
+
+.availability {
+  width: 175px;
+  height: 75px;
+  border-style: solid;
+}
