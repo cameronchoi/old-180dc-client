@@ -1,0 +1,17 @@
+{
+  "user": {
+    "username": "john.smith",
+    "password": "password",
+    "first_name": "John",
+    "last_name": "Smith",
+    "email": "jsmith00@gmail.com"
+  },
+  "personal_info": {
+    "degree_one": "Commerce",
+    "degree_two": "",
+    "major_one": "",
+    "major_two": ""
+  },
+  "digital_impact": true,
+  "previous_score": 50
+}

@@ -5,7 +5,11 @@ import Login from '../Login/Login'
 import Home from '../Home/Home'
 import Interviewer from '../Interviewer/Interviewer'
 import Interviewee from '../Interviewee/Interviewee'
+import Success from '../Success/Success'
+import Allocation from '../Allocation/Allocation'
+
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import logo from '../../assets/180logo3.png'
 
 const { Header, Content, Footer } = Layout
 
@@ -15,7 +19,8 @@ function App () {
       <Layout className='layout'>
         <Header>
           <Link className='link' to='/'>
-            <div className='logo'>180 Degrees Consulting</div>
+            <img src={logo} alt='Logo' className='top-logo' />
+            {/* <div className='logo'>180 Degrees Consulting</div> */}
           </Link>
           <Menu className='header-menu' theme='dark' mode='horizontal'>
             <Menu.Item key='1'>
@@ -39,9 +44,8 @@ function App () {
         </Header>
         <Content style={{ padding: '0 50px' }}>
           <Breadcrumb style={{ margin: '16px 0' }}>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>List</Breadcrumb.Item>
-            <Breadcrumb.Item>App</Breadcrumb.Item>
+            <Breadcrumb.Item> </Breadcrumb.Item>
+            <Breadcrumb.Item> </Breadcrumb.Item>
           </Breadcrumb>
           <div className='site-layout-content'>
             <Switch>
@@ -49,11 +53,14 @@ function App () {
               <Route path='/interviewer' component={Interviewer} />
               <Route path='/interviewee' component={Interviewee} />
               <Route path='/login' component={Login} />
+              <Route path='/success' component={Success} />
+              <Route path='/allocation' component={Allocation} />
             </Switch>
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>
-          180 Degrees Consulting © 2020 Created by Cameron Choi
+          180 Degrees Consulting © 2020 Created by Cameron Choi, Matthew Phang,
+          Chelsy Teng, Ulyana Yunitskaya, Liangyue Wang
         </Footer>
       </Layout>
     </Router>

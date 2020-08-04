@@ -5,6 +5,7 @@ import 'react-calendar/dist/Calendar.css'
 import './Interviewee.css'
 import ApplicantTimes from '../../components/ApplicantTimes'
 import intervieweeTimes from './intervieweeTimes'
+import auth from '../Auth'
 
 class Interviewee extends Component {
   state = {
@@ -21,10 +22,16 @@ class Interviewee extends Component {
     return (
       <div className='Interviewee'>
         <Row justify='center'>
-          <h1>Interviewee Page</h1>
+          <h1 className='page-title'>Enter your available times</h1>
         </Row>
         <Row justify='center'>
-          <p>Enter available times</p>
+          <p>
+            1. Click a day on the calendar to display all the available times
+            during that day.
+          </p>
+        </Row>
+        <Row justify='center'>
+          <p>2. Click on all your available times during that specific day.</p>
         </Row>
         <br />
         <Row align='middle'>
@@ -37,9 +44,18 @@ class Interviewee extends Component {
         </Row>
         <br />
         <br />
-        <br />
         <Row justify='center'>
-          <Button type='primary'>Submit</Button>
+          <Button
+            type='primary'
+            size='large'
+            onClick={() => {
+              auth.login(() => {
+                this.props.history.push('/success')
+              })
+            }}
+          >
+            Submit
+          </Button>
         </Row>
       </div>
     )

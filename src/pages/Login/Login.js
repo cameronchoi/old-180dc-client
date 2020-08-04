@@ -1,6 +1,7 @@
 import React from 'react'
 import { Form, Input, Button, Checkbox, Row, Col } from 'antd'
 import './Login.css'
+import auth from '../Auth'
 
 const layout = {
   labelCol: {
@@ -17,7 +18,7 @@ const tailLayout = {
   }
 }
 
-const Login = () => {
+const Login = props => {
   const onFinish = values => {
     console.log('Success:', values)
   }
@@ -69,7 +70,16 @@ const Login = () => {
         <br />
         <Form.Item {...tailLayout}>
           <Row justify='center'>
-            <Button type='primary' htmlType='submit' block>
+            <Button
+              type='primary'
+              htmlType='submit'
+              block
+              onClick={() => {
+                auth.login(() => {
+                  props.history.push('/Interviewer')
+                })
+              }}
+            >
               Submit
             </Button>
           </Row>

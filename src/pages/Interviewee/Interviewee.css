@@ -21,6 +21,10 @@
   background: #1da57a;
 }
 
+.page-title {
+  font-size: 2em;
+}
+
 /* .react-calendar__navigation .react-calendar__navigation__label {
   font-size: 20px;
 }
